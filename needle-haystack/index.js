@@ -38,11 +38,10 @@ class ListNode {
 	}
 }
 
-const node1 = new ListNode("re");
-const node2 = new ListNode("hello the", node1);
-const node3 = new ListNode(" nodes", node2);
-const head = new ListNode("text", node3);
-
+const head = new ListNode("text");
+head.next = new ListNode(" nodes");
+head.next.next = new ListNode("hello the");
+head.next.next.next = new ListNode("re");
 
 const findNeedleLinkedList = (haystack, needle) => {
 	let curr = haystack;
@@ -103,11 +102,11 @@ const STREAM_OPTS = {
 }
 async function test() {
 	console.log('Testing findNeedleStream...');
-    const readable1 = fs.createReadStream('./sample.txt', STREAM_OPTS);
+    const readable1 = fs.createReadStream('./needle-haystack/sample.txt', STREAM_OPTS);
     const case1 = await findNeedleStream(readable1, "Streams");
     assert(case1);
     
-    const readable2 = fs.createReadStream('./sample1.txt', STREAM_OPTS);
+    const readable2 = fs.createReadStream('./needle-haystack/sample1.txt', STREAM_OPTS);
     const case2 = await findNeedleStream(readable2, "Conclusion\nThis was all about the basics of streams.")
     assert(case2);
 
