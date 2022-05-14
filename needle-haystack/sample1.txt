@@ -1,0 +1,11 @@
+Conclusion
+This was all about the basics of streams. 
+Streams, pipes, and chaining are the core and most 
+powerful features in Node.js. Streams can indeed 
+help you write neat and performant code to perform I/O.
+
+Also, there is a Node.js strategic i
+nitiative worth looking to, called BOB, 
+aiming to improve Node.js streaming data interfaces, 
+both within Node.js core internally, and hopefully also as future public APIs.
+

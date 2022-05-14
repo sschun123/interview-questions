@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "watch": "node_modules/nodemon/bin/nodemon.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "name": "interview-questions",
+  "version": "1.0.0",
+  "description": "A list of interesting interview questions and my implementations.",
+  "main": "index.js",
+  "license": "MIT"
+}
